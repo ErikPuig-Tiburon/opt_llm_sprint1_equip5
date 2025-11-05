@@ -60,15 +60,6 @@ El web ha d’oferir **informació, formularis de contacte, enquestes i una intr
 
 ---
 
-## 👥 Equip de desenvolupament
-
-- **MontsiTech**  
-  Professorat: M. Merino, A. Miralles, L. Ruíz  
-  Curs: 1r ASIX 
-  Data d’inici: Octubre 2025
-
----
-
 > *Aquest projecte forma part del procés d’aprenentatge dels estudiants del CFGS en Administració de Sistemes Informàtics en Xarxa (ASIX).*
 
 
