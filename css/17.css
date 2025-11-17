@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
+
+article.slide {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 25px 35px;
+}
+
+article.slide > header h1 {
+    font-size: 1.1em;
+    color: #555;
+    font-weight: bold;
+    border-bottom: 2px solid #c9a977;
+    padding-bottom: 10px;
+    margin: 0 0 20px 0;
+}
+
+.slide-title {
+    font-size: 1.6em;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-left: 4px solid #c9a977;
+    padding-left: 10px;
+}
+
+.example-intro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fdfaf5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.example-intro .icon {
+    font-size: 2.5em;
+    color: #a05a2c;
+}
+.example-intro p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.two-col {
+    display: flex;
+    gap: 40px;
+}
+.two-col > section {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #c9a977;
+    padding-bottom: 5px;
+}
+
+.prep-list ol {
+    list-style-type: none;
+    padding-left: 0;
+    counter-reset: prep-counter;
+}
+.prep-list li {
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 40px;
+}
+.prep-list li::before {
+    content: counter(prep-counter);
+    counter-increment: prep-counter;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #a05a2c;
+    min-width: 25px;
+    text-align: right;
+    line-height: 1;
+}
+.prep-list h4,
+.benefits-list dt {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.prep-list p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.benefits-list dl {
+    margin: 0;
+    padding: 0;
+}
+.benefits-list dt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+.benefits-list dd {
+    margin-left: 45px;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+.benefits-list .icon {
+    font-size: 2em;
+    color: #a05a2c;
+    min-width: 35px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .two-col {
+        flex-direction: column;
+    }
+    .benefits-list dd {
+        margin-left: 0;
+    }
+}
