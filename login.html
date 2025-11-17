@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ca">
 <head>
   <meta charset="UTF-8">
@@ -8,24 +8,20 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-
-      /* 🔵 IMATGE DE FONS */
       background-image: url("https://img.gerencia.cl/wp-content/uploads/2023/09/18125656/20230914w3.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
-
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      padding-top: 80px; 
+      padding-top: 80px;
       padding-bottom: 60px;
     }
 
-    /* QUADRE LOGIN */
     .login-box {
       background-color: rgba(255, 255, 255, 0.92);
       padding: 20px;
@@ -35,7 +31,6 @@
       text-align: center;
     }
 
-    /* INGRESO */
     input {
       width: 90%;
       padding: 10px;
@@ -44,7 +39,6 @@
       border-radius: 5px;
     }
 
-    /* BOTÓ */
     button {
       background-color: #007bff;
       color: white;
@@ -62,27 +56,26 @@
       font-size: 0.9em; 
       margin-top: 10px;
     }
+
+    header, footer {
+      width:100%; 
+      position:fixed; 
+      left:0; 
+      background-color:rgb(153, 219, 236);
+      color:black;
+      font-weight:bold;
+      text-align:center;
+    }
+
+    header { top:0; padding:15px; font-size:1.2em; }
+    footer { bottom:0; padding:12px; font-size:0.95em; }
   </style>
 </head>
 
 <body>
 
-  <!-- 🔵 CAPÇALERA -->
-  <header style="
-        width:100%; 
-        position:fixed; 
-        top:0; 
-        left:0; 
-        background-color:rgb(153, 219, 236); 
-        padding:15px; 
-        color:black; 
-        text-align:center; 
-        font-size:1.2em;
-        font-weight:bold;">
-    Montsià30 · Intranet
-  </header>
+  <header>Montsià30 · Intranet</header>
 
-  <!-- 🔐 QUADRE LOGIN -->
   <div class="login-box">
     <h2>Intranet Montsià30</h2>
 
@@ -95,7 +88,6 @@
     <p id="error" class="error"></p>
   </div>
 
-  <!-- 🧠 VALIDACIÓ -->
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault();
@@ -117,26 +109,12 @@
         error.textContent = 'La contrasenya ha de tenir 8 caràcters, majúscula, minúscula i número';
       } 
       else {
-        error.style.color = 'green';
-        error.textContent = 'Accés correcte!';
+        window.location.href = "intranet.html";
       }
     });
   </script>
 
-  <!-- 🔻 PEU DE PÀGINA -->
-  <footer style="
-        width:100%; 
-        position:fixed; 
-        bottom:0; 
-        left:0; 
-        background-color:rgb(153, 219, 236);  
-        padding:12px; 
-        text-align:center; 
-        font-size:0.95em; 
-        color:black; 
-        font-weight:bold;">
-    © 2024 Montsià30 · Sprint 1 · Desenvolupat per l'equip ASIX1
-  </footer>
+  <footer>© 2024 Montsià30 · Sprint 1 · Desenvolupat per ASIX1</footer>
 
 </body>
 </html>
