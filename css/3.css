@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    color: #0056b3;
+}
+
+img, figure {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+article.slide {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 25px 35px;
+}
+
+article.slide > header h1 {
+    font-size: 1.1em;
+    color: #555;
+    font-weight: bold;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin: 0 0 20px 0;
+}
+
+.slide-content h2 {
+    font-size: 1.6em;
+    color: #000;
+    margin-top: 0;
+}
+
+article.slide > footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    font-size: 0.8em;
+    color: #777;
+}
+
+article.slide > footer .logos {
+    display: flex;
+    gap: 15px;
+}
+
+.two-col {
+    display: flex;
+    gap: 30px;
+}
+.two-col > .col-left { flex: 6; }
+.two-col > .col-right,
+.two-col > aside.col-right { flex: 4; }
+
+.info-box {
+    background-color: #fdfaf5;
+    border: 1px solid #f0e6d5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.info-box h3 {
+    color: #a05a2c;
+    border-bottom: 2px solid #c9a977;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.info-box ul,
+aside.tutorial-video ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.info-box li,
+aside.tutorial-video li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+
+.info-box li::before,
+aside.tutorial-video li::before {
+    content: '|';
+    color: #a05a2c;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+aside.tutorial-video img {
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    display: block;
+}
+aside.tutorial-video p {
+    font-size: 0.95em;
+}
+.tutorial-link a {
+    font-size: 0.85em;
+    word-break: break-all;
+    color: #555;
+}
+
+@media (max-width: 900px) {
+    .two-col {
+        flex-direction: column;
+    }
+}
