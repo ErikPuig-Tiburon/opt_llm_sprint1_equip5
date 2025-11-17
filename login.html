@@ -1,0 +1,142 @@
+<!DOCTYPE html> 
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Montsià30</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+
+      /* 🔵 IMATGE DE FONS */
+      background-image: url("https://img.gerencia.cl/wp-content/uploads/2023/09/18125656/20230914w3.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding-top: 80px; 
+      padding-bottom: 60px;
+    }
+
+    /* QUADRE LOGIN */
+    .login-box {
+      background-color: rgba(255, 255, 255, 0.92);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      width: 300px;
+      text-align: center;
+    }
+
+    /* INGRESO */
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* BOTÓ */
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover { background-color: #0056b3; }
+
+    .error { 
+      color: red; 
+      font-size: 0.9em; 
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔵 CAPÇALERA -->
+  <header style="
+        width:100%; 
+        position:fixed; 
+        top:0; 
+        left:0; 
+        background-color:rgb(153, 219, 236); 
+        padding:15px; 
+        color:black; 
+        text-align:center; 
+        font-size:1.2em;
+        font-weight:bold;">
+    Montsià30 · Intranet
+  </header>
+
+  <!-- 🔐 QUADRE LOGIN -->
+  <div class="login-box">
+    <h2>Intranet Montsià30</h2>
+
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="usuari@montsia30.net" required><br>
+      <input type="password" id="password" placeholder="Contrasenya" required><br>
+      <button type="submit">Entrar</button>
+    </form>
+
+    <p id="error" class="error"></p>
+  </div>
+
+  <!-- 🧠 VALIDACIÓ -->
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const error = document.getElementById('error');
+
+      const emailCorrecte = /^[A-Za-z0-9._%+-]+@montsia30\.net$/.test(email);
+      const contrasenyaCorrecta = password.length >= 8 
+                                  && /[A-Z]/.test(password) 
+                                  && /[a-z]/.test(password) 
+                                  && /\d/.test(password);
+
+      if (!emailCorrecte) {
+        error.textContent = 'El correu ha de ser del domini montsia30.net';
+      } 
+      else if (!contrasenyaCorrecta) {
+        error.textContent = 'La contrasenya ha de tenir 8 caràcters, majúscula, minúscula i número';
+      } 
+      else {
+        error.style.color = 'green';
+        error.textContent = 'Accés correcte!';
+      }
+    });
+  </script>
+
+  <!-- 🔻 PEU DE PÀGINA -->
+  <footer style="
+        width:100%; 
+        position:fixed; 
+        bottom:0; 
+        left:0; 
+        background-color:rgb(153, 219, 236);  
+        padding:12px; 
+        text-align:center; 
+        font-size:0.95em; 
+        color:black; 
+        font-weight:bold;">
+    © 2024 Montsià30 · Sprint 1 · Desenvolupat per l'equip ASIX1
+  </footer>
+
+</body>
+</html>
