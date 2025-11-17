@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intranet Montsià30</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef7ff;
+      margin: 0;
+      padding-top: 80px;
+      padding-bottom: 60px;
+    }
+
+    header, footer {
+      width:100%; 
+      position:fixed; 
+      left:0; 
+      background-color:rgb(153, 219, 236);
+      color:black;
+      font-weight:bold;
+      text-align:center;
+    }
+
+    header { top:0; padding:15px; font-size:1.2em; }
+    footer { bottom:0; padding:12px; font-size:0.95em; }
+
+    h2 { text-align: center; }
+
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    tr:hover {
+      background-color: #d7ecff;
+      cursor: pointer;
+    }
+
+    #formulariBox {
+      width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      display: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    select, button {
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>Intranet Montsià30</header>
+
+<h2>Llistat d'empreses</h2>
+
+<table>
+  <tr>
+    <th>Empresa</th>
+    <th>Municipi</th>
+    <th>Sector</th>
+  </tr>
+
+  <tr onclick="seleccionarEmpresa('TecnoAmposta')">
+    <td>TecnoAmposta</td>
+    <td>Amposta</td>
+    <td>Tecnologia</td>
+  </tr>
+
+  <tr onclick="seleccionarEmpresa('EbreComerç')">
+    <td>EbreComerç</td>
+    <td>Tortosa</td>
+    <td>Comerç</td>
+  </tr>
+
+  <tr onclick="seleccionarEmpresa('DeltaVerde')">
+    <td>DeltaVerde</td>
+    <td>Deltebre</td>
+    <td>Agroalimentari</td>
+  </tr>
+</table>
+
+<!-- FORMULARI DESPLEGABLE -->
+<div id="formulariBox">
+  <h3 id="empresaSeleccionada"></h3>
+
+  <label for="formulari">Selecciona el formulari:</label>
+  <select id="formulari">
+    <option value="comercial">Autodiagnosi empreses del sector comercial</option>
+  </select>
+
+  <br>
+
+  <button onclick="obrirFormulari()">Obrir formulari</button>
+</div>
+
+<script>
+  function seleccionarEmpresa(nom) {
+    document.getElementById("empresaSeleccionada").textContent =
+      "Empresa seleccionada: " + nom;
+
+    document.getElementById("formulariBox").style.display = "block";
+  }
+
+  function obrirFormulari() {
+    const tipus = document.getElementById("formulari").value;
+
+    if (tipus === "comercial") {
+      window.open(
+        "https://ccam.gencat.cat/ca/serveis/autodiagnosi/",
+        "_blank"
+      );
+    }
+  }
+</script>
+
+<footer>© 2024 Montsià30 · Sprint 1 · Desenvolupat per ASIX1</footer>
+
+</body>
+</html>
