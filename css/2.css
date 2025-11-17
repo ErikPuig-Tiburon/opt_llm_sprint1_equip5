@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.4;
+    margin: 0;
+    padding: 8px;
+}
+
+.document-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.page {
+    background-color: #ffffff;
+    border: 3px solid rgb(153, 219, 236);
+    box-shadow: 0 4px 10px rgba(153, 219, 236, 0.3);
+    border-radius: 10px;
+    padding: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+.page:hover {
+    box-shadow: 0 6px 15px rgba(153, 219, 236, 0.5);
+}
+
+.section-block {
+    margin-bottom: 15px;
+}
+
+.block-help h2 {
+    background-color: rgba(153, 219, 236, 0.2);
+    color: rgb(153, 219, 236);
+    padding: 10px;
+    border: 2px solid rgb(153, 219, 236);
+    border-radius: 8px;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.block-help > p {
+    background-color: rgba(153, 219, 236, 0.1);
+    border: 2px solid rgb(153, 219, 236);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.help-points {
+    display: flex;
+    gap: 8px;
+    background-color: rgba(153, 219, 236, 0.1);
+    border: 2px solid rgb(153, 219, 236);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.help-points .point {
+    flex: 1;
+    text-align: center;
+}
+
+.help-points .point h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    color: rgb(120, 190, 210);
+}
+
+.help-points .point p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.block-ideas .ideas-header {
+    background-color: rgb(153, 219, 236);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.ideas-header .icon-bulb {
+    font-size: 24px;
+}
+
+.ideas-header .ideas-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.idea-boxes {
+    display: flex;
+    gap: 8px;
+}
+
+.idea-box {
+    flex: 1;
+    background-color: rgba(153, 219, 236, 0.05);
+    border: 2px solid rgb(153, 219, 236);
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.idea-box:hover {
+    background-color: rgba(153, 219, 236, 0.15);
+    transform: scale(1.02);
+}
+
+.idea-box h3 {
+    color: rgb(153, 219, 236);
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+
+.idea-box p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.vertical-separator {
+    width: 2px;
+    background-color: rgb(153, 219, 236);
+}
+
+.idea-box-image {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.phone-image {
+    width: 100%;
+    border: 3px solid rgb(153, 219, 236);
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.phone-image:hover {
+    transform: scale(1.02);
+}
+
+.box-note {
+    background-color: rgba(153, 219, 236, 0.1);
+    border: 2px solid rgb(153, 219, 236);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.box-note p {
+    margin: 0;
+    font-size: 11px;
+    color: #333;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 5px;
+    }
+
+    .page {
+        padding: 10px;
+    }
+
+    .help-points {
+        flex-direction: column;
+    }
+
+    .idea-boxes {
+        flex-direction: column;
+    }
+
+    .vertical-separator {
+        display: none;
+    }
+}

@@ -3,124 +3,208 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f5f5f5;
     color: #333;
-    line-height: 1.5;
+    line-height: 1.4;
     margin: 0;
-    padding: 20px;
-}
-
-a {
-    color: #0056b3;
-}
-
-img, figure {
-    max-width: 100%;
-    height: auto;
-    margin: 0;
+    padding: 8px;
 }
 
 article.slide {
     background-color: #ffffff;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 3px solid rgb(153, 219, 236);
+    box-shadow: 0 4px 10px rgba(153, 219, 236, 0.3);
     margin: 0 auto;
-    max-width: 1200px;
-    padding: 25px 35px;
+    max-width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
 }
 
-article.slide > header h1 {
-    font-size: 1.1em;
-    color: #555;
-    font-weight: bold;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin: 0 0 20px 0;
+article.slide:hover {
+    box-shadow: 0 6px 15px rgba(153, 219, 236, 0.5);
 }
 
-.slide-content h2 {
-    font-size: 1.6em;
-    color: #000;
-    margin-top: 0;
-}
-
-article.slide > footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-    font-size: 0.8em;
-    color: #777;
-}
-
-article.slide > footer .logos {
-    display: flex;
-    gap: 15px;
+.slide-content {
+    margin-bottom: 12px;
 }
 
 .two-col {
     display: flex;
-    gap: 30px;
+    gap: 12px;
 }
-.two-col > .col-left { flex: 6; }
-.two-col > .col-right,
-.two-col > aside.col-right { flex: 4; }
+
+.col-left {
+    flex: 1;
+}
+
+.col-right {
+    flex: 1;
+}
 
 .info-box {
-    background-color: #fdfaf5;
-    border: 1px solid #f0e6d5;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    background-color: rgba(153, 219, 236, 0.1);
+    border: 2px solid rgb(153, 219, 236);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.info-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(153, 219, 236, 0.4);
+}
+
+.highlights-box {
+    background-color: rgba(153, 219, 236, 0.2);
+}
+
+.note-box {
+    background-color: rgba(153, 219, 236, 0.15);
+}
+
 .info-box h3 {
-    color: #a05a2c;
-    border-bottom: 2px solid #c9a977;
-    padding-bottom: 5px;
-    margin-top: 0;
-}
-
-.info-box ul,
-aside.tutorial-video ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.info-box li,
-aside.tutorial-video li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 12px;
-}
-
-.info-box li::before,
-aside.tutorial-video li::before {
-    content: '|';
-    color: #a05a2c;
+    color: rgb(153, 219, 236);
+    font-size: 16px;
     font-weight: bold;
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(153, 219, 236);
+}
+
+.info-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.info-box li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    transition: padding-left 0.2s ease;
+}
+
+.info-box li:hover {
+    padding-left: 22px;
+}
+
+.info-box li::before {
+    content: '▸';
     position: absolute;
     left: 0;
-    top: 0;
+    color: rgb(153, 219, 236);
+    font-weight: bold;
 }
 
-aside.tutorial-video img {
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-    display: block;
+.info-box a {
+    color: rgb(153, 219, 236);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-aside.tutorial-video p {
-    font-size: 0.95em;
+
+.info-box a:hover {
+    color: rgb(120, 190, 210);
+    text-decoration: underline;
 }
+
+.tutorial-video {
+    background-color: rgba(153, 219, 236, 0.05);
+    border: 2px solid rgb(153, 219, 236);
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.tutorial-video:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(153, 219, 236, 0.4);
+}
+
+.tutorial-video figure {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.tutorial-video img {
+    width: 100%;
+    border: 2px solid rgb(153, 219, 236);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.tutorial-video img:hover {
+    transform: scale(1.02);
+}
+
+.tutorial-video p {
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.tutorial-video ul {
+    list-style: none;
+    padding-left: 0;
+    background-color: rgba(153, 219, 236, 0.1);
+    border: 2px solid rgb(153, 219, 236);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.tutorial-video ul li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.tutorial-video ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: rgb(153, 219, 236);
+    font-weight: bold;
+}
+
+.tutorial-link {
+    background-color: rgba(153, 219, 236, 0.1);
+    border: 2px solid rgb(153, 219, 236);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
 .tutorial-link a {
-    font-size: 0.85em;
-    word-break: break-all;
-    color: #555;
+    color: rgb(153, 219, 236);
+}
+
+.slide-footer {
+    border-top: 2px solid rgb(153, 219, 236);
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #666;
+}
+
+.logos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 900px) {
+    body {
+        padding: 5px;
+    }
+
+    article.slide {
+        padding: 10px;
+    }
+
     .two-col {
         flex-direction: column;
     }
