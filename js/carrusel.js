@@ -7,6 +7,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = dropdownContent.querySelectorAll('a');
     let currentSlide = 0;
 
+    function showIframe(slide, iframeNum) {
+        const iframes = slide.querySelectorAll('.content-iframe');
+        const buttons = slide.querySelectorAll('[data-iframe]');
+
+        iframes.forEach(iframe => {
+            if (iframe.getAttribute('data-iframe-num') === iframeNum.toString()) {
+                iframe.style.display = 'block';
+            } else {
+                iframe.style.display = 'none';
+            }
+        });
+
+        buttons.forEach(button => {
+            if (button.getAttribute('data-iframe') === iframeNum.toString()) {
+                button.style.backgroundColor = 'rgb(120, 190, 210)';
+            } else {
+                button.style.backgroundColor = 'rgb(153, 219, 236)';
+            }
+        });
+    }
+
     function showSlide(index) {
         slides.forEach(slide => slide.classList.remove('active'));
         navLinks.forEach(link => link.classList.remove('active'));
@@ -15,7 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
         else if (index < 0) currentSlide = slides.length - 1;
         else currentSlide = index;
 
-        if (slides[currentSlide]) slides[currentSlide].classList.add('active');
+        if (slides[currentSlide]) {
+            slides[currentSlide].classList.add('active');
+            showIframe(slides[currentSlide], 1);
+        }
         if (navLinks[currentSlide]) {
             navLinks[currentSlide].classList.add('active');
             dropdownBtn.textContent = navLinks[currentSlide].textContent;
@@ -24,6 +48,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (slides.length > 0) {
         showSlide(currentSlide);
+
+        slides.forEach(slide => {
+            const buttons = slide.querySelectorAll('[data-iframe]');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const iframeNum = parseInt(this.getAttribute('data-iframe'));
+                    showIframe(slide, iframeNum);
+                });
+            });
+        });
 
         if (nextButton) nextButton.addEventListener('click', () => showSlide(currentSlide + 1));
         if (prevButton) prevButton.addEventListener('click', () => showSlide(currentSlide - 1));
