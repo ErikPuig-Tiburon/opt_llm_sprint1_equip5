@@ -56,13 +56,13 @@ header {
 }
 
 .sugerencies-btn {
-    /* mateix estil base que contact-btn, es pot personalitzar si cal */
+    position: relative;
 }
 
 /* Botó Inici a la dreta del header */
 .home-btn {
     position: absolute;
-    right: 1.5rem;
+    right: 3rem;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgb(153, 219, 236);
@@ -81,7 +81,7 @@ header {
     transform: translateY(-50%) scale(1.05);
 }
 
-/* Breadcrumbs */
+/* cum de pan o algo asi */
 #breadcrumbs-container {
     background-color: #f9f9f9;
     padding: 15px 20px;

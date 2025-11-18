@@ -18,7 +18,7 @@ body {
   background-color: rgba(255, 255, 255, 0.92);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   width: 300px;
   text-align: center;
 }
@@ -51,35 +51,37 @@ button:hover {
   margin-top: 10px;
 }
 
-header, footer {
-  width:100%;
-  position:fixed;
-  left:0;
-  background-color:rgb(153, 219, 236);
-  color:black;
-  font-weight:bold;
-  text-align:center;
+header,
+footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  background-color: rgb(153, 219, 236);
+  color: black;
+  font-weight: bold;
+  text-align: center;
 }
 
 header {
-  top:0;
-  padding:15px 70px 15px 15px; /* espacio a la derecha para el botón Inici */
-  font-size:1.2em;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:fixed;
+  top: 0;
+  padding: 15px 70px 15px 15px;
+  /* espacio a la derecha para el botón Inici */
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
 }
 
 footer {
-  bottom:0;
-  padding:12px;
-  font-size:0.95em;
+  bottom: 0;
+  padding: 12px;
+  font-size: 0.95em;
 }
 
 .home-btn {
   position: absolute;
-  right: 1.5rem;
+  right: 3rem;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgb(153, 219, 236);
@@ -112,7 +114,8 @@ footer {
     padding: 16px;
   }
 
-  header, footer {
+  header,
+  footer {
     font-size: 1em;
     padding: 10px;
   }

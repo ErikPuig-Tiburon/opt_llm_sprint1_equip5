@@ -6,50 +6,56 @@ body {
   padding-bottom: 60px;
 }
 
-header, footer {
-  width:100%;
-  position:fixed;
-  left:0;
-  background-color:rgb(153, 219, 236);
-  color:black;
-  font-weight:bold;
-  text-align:center;
+header,
+footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  background-color: rgb(153, 219, 236);
+  color: black;
+  font-weight: bold;
+  text-align: center;
 }
 
 header {
-  top:0;
-  padding:15px 70px 15px 15px; /* espacio a la derecha para el botón Inici */
-  font-size:1.2em;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:fixed;
+  top: 0;
+  padding: 15px 70px 15px 15px;
+  /* espacio a la derecha para el botón Inici */
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
 }
 
 footer {
-  bottom:0;
-  padding:12px;
-  font-size:0.95em;
+  bottom: 0;
+  padding: 12px;
+  font-size: 0.95em;
 }
 
 .home-btn {
   position: absolute;
-  right: 1.5rem;
+  right: 7rem;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgb(153, 219, 236);
-  color: white;
+  background-color: white;
+  color: rgb(153, 219, 236);
   padding: 6px 14px;
   font-size: 14px;
   border-radius: 8px;
   border: 2px solid white;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+  z-index: 1001;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
 }
 
 .home-btn:hover {
   background-color: rgb(120, 190, 210);
+  color: white;
   transform: translateY(-50%) scale(1.05);
 }
 
@@ -62,10 +68,11 @@ table {
   margin: 20px auto;
   border-collapse: collapse;
   background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-th, td {
+th,
+td {
   padding: 12px;
   border: 1px solid #ccc;
   text-align: center;
@@ -83,11 +90,12 @@ tr:hover {
   background: white;
   border-radius: 10px;
   display: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
-select, button {
+select,
+button {
   padding: 10px;
   margin: 10px;
   cursor: pointer;
@@ -116,7 +124,8 @@ button:hover {
     font-size: 0.9rem;
   }
 
-  th, td {
+  th,
+  td {
     padding: 8px;
   }
 
@@ -128,6 +137,15 @@ button:hover {
   header {
     font-size: 1.1em;
     padding: 12px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .home-btn {
+    position: static;
+    transform: none;
+    display: inline-block;
+    margin-top: 8px;
   }
 
   footer {
