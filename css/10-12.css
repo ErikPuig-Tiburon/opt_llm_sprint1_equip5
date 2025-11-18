@@ -1,0 +1,455 @@
+:root {
+    --color-primary-dark: #8c0000;
+    --color-secondary-orange: #f26522;
+    --color-text-dark: #333;
+    --color-header-bg: #f5f5f5;
+    --color-light-orange: #f7d6af;
+    --color-separator: #ccc;
+    --color-table-header: #966f57;
+    --color-table-bg-light: #f7f3f0;
+    --color-table-bg-dark: #eee8e3;
+}
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.document-container {
+    display: flex;
+    width: 100%;
+    max-width: 800px; /* Ancho ajustado para layout sin sidebar */
+    margin: 0 auto;
+}
+
+/* El contenedor principal ya no tiene barra lateral, ajustamos el padding */
+.main-content.full-width {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.page {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+/* HEADER Y TEXTO BASE */
+.header {
+    margin-bottom: 25px;
+}
+
+.header-line {
+    width: 40px;
+    height: 5px;
+    background-color: var(--color-primary-dark);
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 16px;
+    color: var(--color-primary-dark);
+    margin: 0;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--color-text-dark);
+    margin-top: 0;
+}
+
+p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-text-dark);
+}
+
+.block-help {
+    margin-bottom: 30px;
+}
+
+.help-points {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.point {
+    flex: 1;
+}
+
+.point h3 {
+    font-size: 13px;
+    color: var(--color-primary-dark);
+    font-weight: bold;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.point p {
+    font-size: 12px;
+}
+
+/* BLOQUE DE IDEAS */
+.block-ideas {
+    background-color: var(--color-header-bg);
+    padding: 0;
+}
+
+.ideas-header {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-light-orange);
+    padding: 10px 15px;
+    border-top: 3px solid #e0b48b;
+}
+
+.icon-bulb {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.ideas-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-text-dark);
+}
+
+.idea-boxes {
+    display: flex;
+    padding: 15px;
+    gap: 0;
+    background-color: #e6e6e6;
+}
+
+.vertical-separator {
+    width: 1px;
+    background-color: var(--color-separator);
+    margin: 10px 0;
+}
+
+.idea-box {
+    flex: 1;
+    background-color: white;
+    padding: 15px;
+    border-left: 2px solid var(--color-primary-dark);
+    font-size: 12px;
+}
+
+.idea-box h3 {
+    font-size: 14px;
+    color: var(--color-primary-dark);
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+.idea-box p {
+    margin: 0;
+}
+
+/* Ideas para Geolocalització */
+.idea-box-image-geo {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 15px 15px 0 15px;
+    background-color: #e6e6e6;
+}
+
+.geo-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.geo-note {
+    background-color: #fcfcfc;
+    padding: 8px 15px;
+    font-size: 11px;
+    border-top: 1px dashed #ccc;
+}
+.geo-note p {
+    margin: 0;
+    font-size: 11px;
+}
+
+/* Placeholder Pie de Página */
+.page-footer-placeholder {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+}
+.page-number {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-text-dark);
+}
+
+/* --- ESTILOS DE BLOQUE DE EJEMPLO --- */
+
+.example-block {
+    background-color: var(--color-header-bg);
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.example-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--color-secondary-orange);
+    padding-left: 10px;
+}
+
+.icon-store {
+    width: 30px;
+    height: 30px;
+    background-color: #ac8458;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.example-title p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.example-context {
+    font-size: 13px;
+}
+
+/* Detalles de Campaña (Dos Columnas) */
+.campaign-details {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.campaign-section {
+    flex: 1;
+}
+
+.campaign-section h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.vertical-divider {
+    width: 1px;
+    background-color: var(--color-separator);
+}
+
+/* Títulos de sección con íconos para la página 5 */
+.section-title-with-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-title-with-icon h3 {
+    margin: 0;
+}
+
+.icon-gear {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-icon-gear);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.icon-speedometer {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-icon-speed);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Estilos para "Elementos a Preparar" (Lista Numérica) */
+.step-list {
+    counter-reset: step-counter;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.number {
+    counter-increment: step-counter;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-primary-dark);
+    margin-right: 15px;
+    position: relative;
+}
+
+.number::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-primary-dark);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.content h4 {
+    font-size: 13px;
+    color: var(--color-primary-dark);
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.content p {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Estilos para "Beneficios" (Lista de Iconos) */
+.benefits {
+    border-left: 1px solid var(--color-separator);
+    padding-left: 20px;
+}
+
+.benefit-item {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.benefit-icon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-primary-dark);
+    margin-right: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.icon-chat { background-color: #6c7075; }
+.icon-ads { background-color: #007bff; }
+.icon-group { background-color: #28a745; }
+
+.benefit-text h4 {
+    font-size: 13px;
+    color: var(--color-primary-dark);
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.benefit-text p {
+    font-size: 12px;
+    margin: 0;
+}
+
+/* --- ESTILOS DE TABLA (PÁGINA 4) --- */
+/* Mantenidos del ejercicio anterior por si los necesitas */
+
+.warning-header {
+    border-left: 3px solid var(--color-secondary-orange);
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.warning-header h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.social-table {
+    display: grid;
+    grid-template-columns: 140px repeat(4, 1fr);
+    border-left: 1px solid #c9c9c9;
+    border-top: 1px solid #c9c9c9;
+}
+
+.table-header-row {
+    display: contents;
+}
+
+.table-header-cell {
+    background-color: var(--color-table-header);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+    border-right: 1px solid #c9c9c9;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.table-row {
+    display: contents;
+}
+
+.table-row:nth-child(even) .table-cell,
+.table-row:nth-child(even) .row-label {
+    background-color: var(--color-table-bg-dark);
+}
+
+.table-row:nth-child(odd) .table-cell,
+.table-row:nth-child(odd) .row-label {
+    background-color: var(--color-table-bg-light);
+}
+
+.table-cell {
+    padding: 10px;
+    font-size: 12px;
+    border-right: 1px solid #c9c9c9;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.table-cell p {
+    font-size: 12px;
+    margin: 0 0 10px 0;
+}
+.table-cell p:last-child {
+    margin-bottom: 0;
+}
+
+.row-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-right: 1px solid #c9c9c9;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.row-label h3 {
+    font-size: 12px;
+    color: var(--color-primary-dark);
+    margin: 5px 0 0 0;
+}
+
+.icon-fb-market {
+    width: 30px;
+    height: 30px;
+    background-color: #6c7075;
+}
+.icon-fb-page {
+    width: 30px;
+    height: 30px;
+    background-color: #007bff;
+}
+
+.row-marketplace .placeholder-ads {
+    background-color: white !important;
+}

@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
+
+article.slide {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 25px 35px;
+}
+
+article.slide > header h1 {
+    font-size: 1.1em;
+    color: #555;
+    font-weight: bold;
+    border-bottom: 2px solid #c9a977;
+    padding-bottom: 10px;
+    margin: 0 0 20px 0;
+}
+
+.slide-title {
+    font-size: 1.6em;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-left: 4px solid #c9a977;
+    padding-left: 10px;
+}
+
+.two-col {
+    display: flex;
+    gap: 30px;
+}
+.two-col > .col-left { flex: 6; }
+.two-col > .col-right,
+.two-col > aside.col-right { flex: 4; }
+
+.info-box {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.effort-box h3 {
+    background-color: #b59261;
+    color: white;
+    padding: 8px 12px;
+    margin: -20px -20px 20px -20px;
+    font-size: 1.1em;
+}
+
+.features-box h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+}
+
+.features-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.features-box li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    font-size: 0.9em;
+}
+
+.features-box li::before {
+    content: '|';
+    color: #a05a2c;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.effort-graph {
+    margin: 0;
+}
+.effort-graph dt {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 2px;
+}
+.effort-graph dd {
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.effort-graph progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #eee;
+}
+.effort-graph progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 3px;
+}
+.effort-graph progress::-webkit-progress-value {
+    background-color: #a05a2c;
+    border-radius: 3px;
+}
+.effort-graph progress::-moz-progress-bar {
+    background-color: #a05a2c;
+    border-radius: 3px;
+}
+
+.graph-axis {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 5px;
+    padding: 0 10px;
+}
+
+@media (max-width: 900px) {
+    .two-col {
+        flex-direction: column;
+    }
+}

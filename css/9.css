@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
+
+img, figure {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+a {
+    color: #0056b3;
+}
+
+article.slide {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 25px 35px;
+}
+
+article.slide > header h1 {
+    font-size: 1.1em;
+    color: #555;
+    font-weight: bold;
+    border-bottom: 2px solid #c9a977;
+    padding-bottom: 10px;
+    margin: 0 0 20px 0;
+}
+
+.slide-title {
+    font-size: 1.6em;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-left: 4px solid #c9a977;
+    padding-left: 10px;
+}
+
+.content-top {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.side-image {
+    flex: 0 0 200px;
+    text-align: center;
+    font-weight: bold;
+}
+.side-image img {
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+}
+
+.main-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.info-card {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+.info-card h3 {
+    background-color: #b59261;
+    color: white;
+    padding: 8px 12px;
+    margin: -15px -15px 15px -15px;
+    font-size: 1.1em;
+}
+
+.info-card h4 {
+    font-size: 1em;
+    color: #a05a2c;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.content-bottom {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.info-card-bottom {
+    flex: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+.info-card-bottom h3 {
+    background-color: #c9a977;
+    color: #333;
+    padding: 8px 12px;
+    margin: -15px -15px 15px -15px;
+    font-size: 1.1em;
+}
+
+.bottom-image {
+    flex: 0 0 250px;
+    align-self: center;
+}
+
+@media (max-width: 1000px) {
+    .content-top, .content-bottom {
+        flex-direction: column;
+    }
+    .side-image, .bottom-image {
+        flex: 0 0 auto;
+        width: 200px;
+        margin: 0 auto;
+    }
+}
