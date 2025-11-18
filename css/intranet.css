@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef7ff;
+  margin: 0;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+header, footer {
+  width:100%;
+  position:fixed;
+  left:0;
+  background-color:rgb(153, 219, 236);
+  color:black;
+  font-weight:bold;
+  text-align:center;
+}
+
+header {
+  top:0;
+  padding:15px;
+  font-size:1.2em;
+}
+
+footer {
+  bottom:0;
+  padding:12px;
+  font-size:0.95em;
+}
+
+h2 {
+  text-align: center;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+tr:hover {
+  background-color: #d7ecff;
+  cursor: pointer;
+}
+
+#formulariBox {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  display: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+select, button {
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

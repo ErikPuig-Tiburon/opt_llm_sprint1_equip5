@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("https://img.gerencia.cl/wp-content/uploads/2023/09/18125656/20230914w3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.login-box {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  width: 300px;
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+header, footer {
+  width:100%;
+  position:fixed;
+  left:0;
+  background-color:rgb(153, 219, 236);
+  color:black;
+  font-weight:bold;
+  text-align:center;
+}
+
+header {
+  top:0;
+  padding:15px;
+  font-size:1.2em;
+}
+
+footer {
+  bottom:0;
+  padding:12px;
+  font-size:0.95em;
+}
