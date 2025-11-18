@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextButton = document.querySelector('.next');
     const dropdownBtn = document.getElementById('dropdown-btn');
     const dropdownContent = document.getElementById('carruselDropdown');
-    const navLinks = dropdownContent.querySelectorAll('a');
+    const navLinks = dropdownContent ? dropdownContent.querySelectorAll('a') : [];
     let currentSlide = 0;
 
     const slideTitles = [
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ol.innerHTML = breadcrumbsHTML;
     }
 
-    function showSlide(index) {
+    function showSlide(index, updateLabel = true) {
         slides.forEach(slide => slide.classList.remove('active'));
         navLinks.forEach(link => link.classList.remove('active'));
 
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (navLinks[currentSlide]) {
             navLinks[currentSlide].classList.add('active');
-            dropdownBtn.textContent = navLinks[currentSlide].textContent;
+            // Deixem sempre el text del botó com "Selecciona Eina"
         }
 
         // Actualizar breadcrumbs
@@ -131,7 +131,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (slides.length > 0) {
-        showSlide(currentSlide);
+        // Mostrar primer slide pero mantenir el text inicial "Selecciona Eina"
+        showSlide(currentSlide, false);
 
         slides.forEach(slide => {
             const buttons = slide.querySelectorAll('[data-iframe]');
@@ -146,23 +147,27 @@ document.addEventListener('DOMContentLoaded', function() {
         if (nextButton) nextButton.addEventListener('click', () => showSlide(currentSlide + 1));
         if (prevButton) prevButton.addEventListener('click', () => showSlide(currentSlide - 1));
 
-        if (dropdownBtn) {
-            dropdownBtn.addEventListener('click', function() {
-                dropdownContent.classList.toggle('show');
-            });
-        }
-
+        // Només interceptem els enllaços del dropdown quan hi ha carrusel
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const slideIndex = parseInt(this.getAttribute('data-slide-index'));
-                showSlide(slideIndex);
-                dropdownContent.classList.remove('show');
+                showSlide(slideIndex, true);
+                if (dropdownContent) {
+                    dropdownContent.classList.remove('show');
+                }
             });
+        });
+    }
+
+    // Dropdown funcional en totes les pàgines (carrusel, contactans, sugerencies)
+    if (dropdownBtn && dropdownContent) {
+        dropdownBtn.addEventListener('click', function() {
+            dropdownContent.classList.toggle('show');
         });
 
         window.addEventListener('click', function(event) {
-            if (dropdownBtn && !dropdownBtn.contains(event.target)) {
+            if (!dropdownBtn.contains(event.target) && !dropdownContent.contains(event.target)) {
                 if (dropdownContent.classList.contains('show')) {
                     dropdownContent.classList.remove('show');
                 }

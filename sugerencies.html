@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Suggerències · Montsià30</title>
+    <link rel="stylesheet" href="../css/digi.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="dropdown">
+                <button id="dropdown-btn" class="dropdown-btn">Selecciona Eina</button>
+                <ul id="carruselDropdown" class="dropdown-content">
+                    <li><a href="carrusel.html" data-slide-index="0">Digitalització</a></li>
+                </ul>
+            </div>
+            <a href="contactans.html" class="contact-btn">Contactans</a>
+            <a href="sugerencies.html" class="contact-btn sugerencies-btn">Suggerències</a>
+        </div>
+        <h1>Montsià30</h1>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Envia’ns les teves suggerències</h2>
+            <p>Ajuda’ns a millorar Montsià30 compartint idees, comentaris o millores que t’agradaria veure.</p>
+
+            <form class="contact-form">
+                <label for="nom">Nom i cognoms</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="email">Correu electrònic</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="titol">Títol de la suggerència</label>
+                <input type="text" id="titol" name="titol" required>
+
+                <label for="sugerencia">Suggerència</label>
+                <textarea id="sugerencia" name="sugerencia" rows="6" required></textarea>
+
+                <button type="submit">Enviar suggerència</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>© 2025 Montsià30</footer>
+
+    <script src="js/carrusel.js"></script>
+</body>
+
+</html>

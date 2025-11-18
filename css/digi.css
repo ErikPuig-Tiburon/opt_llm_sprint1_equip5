@@ -25,6 +25,40 @@ header {
     z-index: 1000;
 }
 
+/* Contenidor esquerre del header: menú + botons */
+.header-left {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Botons "Contactans" i "Suggerències" al header */
+.contact-btn {
+    position: relative;
+    background-color: rgb(153, 219, 236);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-btn:hover {
+    background-color: rgb(120, 190, 210);
+    transform: scale(1.05);
+}
+
+.sugerencies-btn {
+    /* mateix estil base que contact-btn, es pot personalitzar si cal */
+}
+
 /* Breadcrumbs */
 #breadcrumbs-container {
     background-color: #f9f9f9;
@@ -93,6 +127,76 @@ main {
     padding-top: 100px;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+/* Formularis de contacte / suggerències */
+.contact-section {
+    max-width: 600px;
+    width: 90%;
+    margin: 40px auto 80px;
+    padding: 24px 32px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid rgb(153, 219, 236);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    text-align: left;
+}
+
+.contact-section h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: rgb(153, 219, 236);
+}
+
+.contact-section p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #333;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 16px;
+    padding: 10px 16px;
+    background-color: rgb(153, 219, 236);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: rgb(120, 190, 210);
+    transform: scale(1.02);
 }
 
 .carrusel-container {
@@ -216,10 +320,7 @@ main {
 }
 
 .dropdown {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
     margin-top: 0;
 }
 
@@ -296,10 +397,24 @@ main {
         margin-top: 8px;
     }
 
-    .dropdown {
+    .header-left {
         position: static;
         transform: none;
         margin-top: 8px;
+        justify-content: center;
+    }
+
+    .dropdown {
+        position: static;
+        transform: none;
+        margin-top: 0;
+    }
+
+    .contact-btn,
+    .sugerencies-btn {
+        position: static;
+        transform: none;
+        display: inline-block;
     }
 
     .dropdown-content {

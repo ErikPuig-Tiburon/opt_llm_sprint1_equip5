@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Contactans · Montsià30</title>
+    <link rel="stylesheet" href="../css/digi.css">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="dropdown">
+                <button id="dropdown-btn" class="dropdown-btn">Selecciona Eina</button>
+                <ul id="carruselDropdown" class="dropdown-content">
+                    <li><a href="carrusel.html" data-slide-index="0">Digitalització</a></li>
+                </ul>
+            </div>
+            <a href="contactans.html" class="contact-btn">Contactans</a>
+            <a href="sugerencies.html" class="contact-btn sugerencies-btn">Suggerències</a>
+        </div>
+        <h1>Montsià30</h1>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Contacta amb nosaltres</h2>
+            <p>Si tens qualsevol dubte o proposta sobre el projecte Montsià30, omple el formulari i ens posarem en
+                contacte amb tu.</p>
+
+            <form class="contact-form">
+                <label for="nom">Nom i cognoms</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="email">Correu electrònic</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="empresa">Empresa (opcional)</label>
+                <input type="text" id="empresa" name="empresa">
+
+                <label for="missatge">Missatge</label>
+                <textarea id="missatge" name="missatge" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>© 2025 Montsià30</footer>
+
+    <script src="js/carrusel.js"></script>
+</body>
+
+</html>
