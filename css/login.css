@@ -63,12 +63,57 @@ header, footer {
 
 header {
   top:0;
-  padding:15px;
+  padding:15px 70px 15px 15px; /* espacio a la derecha para el botón Inici */
   font-size:1.2em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:fixed;
 }
 
 footer {
   bottom:0;
   padding:12px;
   font-size:0.95em;
+}
+
+.home-btn {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(153, 219, 236);
+  color: white;
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 2px solid white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.home-btn:hover {
+  background-color: rgb(120, 190, 210);
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Responsive: mòbil */
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+    padding-top: 90px;
+    padding-bottom: 50px;
+  }
+
+  .login-box {
+    width: 90%;
+    max-width: 320px;
+    padding: 16px;
+  }
+
+  header, footer {
+    font-size: 1em;
+    padding: 10px;
+  }
 }
