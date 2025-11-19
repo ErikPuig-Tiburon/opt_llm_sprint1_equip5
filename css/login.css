@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   background-image: url("https://img.gerencia.cl/wp-content/uploads/2023/09/18125656/20230914w3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@ footer {
 
 .home-btn {
   position: absolute;
-  right: 3rem;
+  right: 7rem;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgb(153, 219, 236);
