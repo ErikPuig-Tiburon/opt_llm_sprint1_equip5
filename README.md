@@ -1,65 +1,82 @@
 
-# 🌐 Projecte Montsià30 Web
+## 🌐 Projecte Montsià30 Web
 
-## 📋 Descripció
+### 📋 Descripció general
 
-Aquest projecte forma part del **SPRINT 1** dels mòduls **LLM, DIGI, SOSTE i OPT** del curs **1r ASIX / 1r DAW**.  
-L’objectiu és desenvolupar una **aplicació web** per a l’associació **Montsià30**, una entitat d’empreses del Montsià que vol promoure la **digitalització de les PIMEs** i **l’acompliment dels Objectius de Desenvolupament Sostenible (ODS)**.
+Aquest repositori conté la versió del **SPRINT 1** dels mòduls **LLM, DIGI, SOSTE i OPT** del curs **1r ASIX / 1r DAW**.
+L’objectiu és desenvolupar una **aplicació web estàtica** per a l’associació **Montsià30**, una entitat d’empreses del Montsià que vol promoure la **digitalització de les PIMEs** i **l’acompliment dels Objectius de Desenvolupament Sostenible (ODS)**.
 
-El web ha d’oferir **informació, formularis de contacte, enquestes i una intranet**, tot amb un disseny atractiu, accessible i fàcilment mantenible.
-
----
-
-## 🚀 Objectius del projecte
-
-- Donar visibilitat a les iniciatives de **digitalització** i **sostenibilitat** del territori.  
-- Crear una **pàgina principal** amb accés a tres espais:
-  1. Espai Digitalització  
-  2. Espai Sostenibilitat  
-  3. Intranet (accés restringit)
-- Facilitar **formularis per sol·licitar informació i suggeriments**.  
-- A la intranet:
-  - Mostrar un **llistat d’empreses** per municipi i sector.  
-  - Permetre cercar empreses per **nom o municipi**.  
-  - Registrar i consultar resultats d’**enquestes de digitalització i sostenibilitat**.  
-- Preparar el codi per ser **reutilitzable** i de **manteniment senzill**.
+El web ofereix **informació, formularis de contacte i suggeriments, un espai de digitalització i una intranet bàsica**, amb un disseny senzill, responsive i fàcilment mantenible.
 
 ---
 
-## 🧰 Tecnologies utilitzades
+### 🗂 Estructura del projecte
 
-- **HTML5** i **CSS3** per a l’estructura i el disseny del web.  
-- **JavaScript** per a la interactivitat i les validacions.  
-- **XML** per a l’emmagatzematge de dades (empreses i respostes).  
-- **Google Docs / Sheets** per a la gestió col·laborativa del projecte.  
-- **Git** i **GitHub** per al control de versions i treball en equip.
-
----
-
-## 💡 Funcionalitats de la versió 1 (Sprint 1)
-
-- Pàgina principal amb accés a les 3 seccions.  
-- Espai “Digitalització” complet amb carrusel d’informació.  
-- Sistema de **login** per a la intranet amb validació bàsica:
-  - Contrasenya amb mínim 8 caràcters, majúscules, minúscules i un caràcter alfanumèric.  
-  - Nom d’usuari amb domini `@montsia30.net`.  
-- Llistat d’empreses amb accés als formularis d’autodiagnosi del sector comercial.  
-- Formularis XML per a guardar resultats d’enquestes.
+- **Arrel del projecte**
+  - **`index.html`**: pàgina principal amb accés als espais de **Digitalització**, **Sostenibilitat** (pendents futures ampliacions) i **Intranet**.
+  - **`carrusel.html`**: espai de **Digitalització**, amb un carrusel d’eines i continguts explicatius (pàgines de suport dins la carpeta `html/`).
+  - **`contactans.html`**: pàgina de **contacte** amb formulari.
+  - **`sugerencies.html`**: pàgina de **suggeriments** amb formulari específic.
+  - **`login.html`**: pantalla de **login** per accedir a la intranet.
+  - **`intranet.html`**: pàgina d’**intranet**, amb llistat d’empreses i accés al formulari d’autodiagnosi.
+- **Carpetes principals**
+  - **`css/`**: fulls d’estil (`style.css`, `digi.css`, `login.css`, `intranet.css`) per a cada secció.
+  - **`js/`**: fitxers JavaScript per al carrusel, el login i la interacció a la intranet.
+  - **`html/`**: pàgines de contingut associades a l’espai de digitalització (detall de cada eina/diapositiva).
+  - **`img/`**: recursos gràfics del lloc, incloent el **favicon** comú a totes les pàgines.
 
 ---
 
-## 🧠 Objectius d’aprenentatge
+### 🚀 Objectius funcionals del web
 
-- Analitzar i comprendre una comanda real d’un client.  
-- Planificar i estructurar un web amb diverses seccions.  
-- Gestionar dades en format XML.  
-- Crear formularis amb validacions bàsiques.  
-- Dissenyar la interfície de manera accessible i coherent.  
-- Treballar col·laborativament amb eines compartides.  
-- Desenvolupar una primera versió funcional del web abans del 19 de novembre de 2025.
+- **Pàgina principal** amb accés clar als diferents espais del projecte.
+- **Espai de Digitalització** amb carrusel de continguts i navegació per diferents eines.
+- **Formulari de contacte** i **formulari de suggeriments** per a empreses i usuaris.
+- **Login d’intranet** amb validació bàsica:
+  - Contrasenya amb mínim 8 caràcters, majúscules, minúscules i caràcters alfanumèrics.
+  - Correu amb domini `@montsia30.net`.
+- **Intranet d’empreses**:
+  - Llistat d’empreses amb informació bàsica (nom, municipi, sector).
+  - Accés a formulari d’**autodiagnosi del sector comercial**.
 
 ---
 
-> *Aquest projecte forma part del procés d’aprenentatge dels estudiants del CFGS en Administració de Sistemes Informàtics en Xarxa (ASIX).*
+### 🧰 Tecnologies utilitzades
 
+- **HTML5** i **CSS3** per a l’estructura i el disseny del web.
+- **JavaScript** per a la interactivitat (carrusel, validacions de formulari, interaccions a la intranet).
+- **Git** per al control de versions i treball en equip.
 
+> En versions futures es poden integrar altres tecnologies (per ex. XML, emmagatzematge persistent, etc.) segons els requeriments dels següents sprints.
+
+---
+
+### ▶️ Com provar el projecte
+
+- **Opció 1 (ràpida)**: obrir `index.html` directament amb el navegador.
+- **Opció 2 (recomanada)**:
+  - Servir la carpeta del projecte amb un petit servidor local (per exemple, `Live Server` a VS Code).
+  - Navegar a `index.html` i accedir a la resta de pàgines mitjançant els enllaços del menú.
+
+---
+
+### 🧠 Objectius d’aprenentatge
+
+- Analitzar i comprendre una comanda real d’un client.
+- Planificar i estructurar un web amb diverses seccions i rols d’usuari.
+- Dissenyar interfícies senzilles, coherents i accessibles.
+- Aplicar validacions bàsiques en formularis amb JavaScript.
+- Treballar col·laborativament amb **Git** i documentar el projecte.
+
+---
+
+### 👥 Integrants del grup 5
+
+- **Erik Puig**
+- **Chaimae Bahri**
+- **Ferran Valldeperez**
+- **Jordi del Valle**
+
+---
+
+> *Aquest projecte forma part del procés d’aprenentatge dels estudiants del CFGS en Administració de Sistemes Informàtics en Xarxa (ASIX) i/o Desenvolupament d’Aplicacions Web (DAW).*

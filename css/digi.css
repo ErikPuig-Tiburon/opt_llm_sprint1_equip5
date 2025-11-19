@@ -311,9 +311,24 @@ main {
     display: none;
 }
 
-.prev,
+
 .next {
-    cursor: pointer;
+    cursor: e-resize;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px 20px;
+    color: white;
+    background-color: rgb(153, 219, 236);
+    border: none;
+    font-size: 28px;
+    transition: all 0.3s;
+    z-index: 500;
+    border-radius: 5px;
+}
+
+.prev {
+    cursor: w-resize;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
