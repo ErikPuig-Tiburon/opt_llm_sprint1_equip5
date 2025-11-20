@@ -256,9 +256,16 @@ main {
     text-align: center;
 }
 
-.carrusel-content>button {
-    position: absolute;
-    top: 32px;
+/* New buttons styling using flexbox */
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.buttons-container button {
     background-color: rgb(153, 219, 236);
     color: white;
     border: none;
@@ -269,35 +276,7 @@ main {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.carrusel-content>button:nth-of-type(1) {
-    left: 32px;
-}
-
-.carrusel-content>button:nth-of-type(2) {
-    left: 80px;
-}
-
-.carrusel-content>button:nth-of-type(3) {
-    left: 128px;
-}
-
-.carrusel-content>button:nth-of-type(4) {
-    left: 176px;
-}
-
-.carrusel-content>button:nth-of-type(5) {
-    left: 224px;
-}
-
-.carrusel-content>button:nth-of-type(6) {
-    left: 272px;
-}
-
-.carrusel-content>button:nth-of-type(7) {
-    left: 320px;
-}
-
-.carrusel-content>button:hover {
+.buttons-container button:hover {
     background-color: rgb(120, 190, 210);
     transform: scale(1.1);
 }
@@ -479,7 +458,7 @@ main {
 
     main {
         width: 100%;
-        padding-top: 120px;
+        padding-top: 140px; /* Increased to ensure header doesn't cover content */
     }
 
     .carrusel-container {
@@ -505,35 +484,8 @@ main {
         right: 10px;
     }
 
-    .carrusel-content>button:nth-of-type(1) {
-        left: 16px;
-    }
-
-    .carrusel-content>button:nth-of-type(2) {
-        left: 56px;
-    }
-
-    .carrusel-content>button:nth-of-type(3) {
-        left: 96px;
-    }
-
-    .carrusel-content>button:nth-of-type(4) {
-        left: 136px;
-    }
-
-    .carrusel-content>button:nth-of-type(5) {
-        left: 176px;
-    }
-
-    .carrusel-content>button:nth-of-type(6) {
-        left: 216px;
-    }
-
-    .carrusel-content>button:nth-of-type(7) {
-        left: 256px;
-    }
-
-    .carrusel-content>button {
+    /* Buttons already handled by flexbox, so we just adjust padding if needed */
+    .buttons-container button {
         padding: 6px 13px;
         font-size: 14px;
     }
@@ -604,39 +556,6 @@ li:hover {
         font-size: 19px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer {
     background-color: rgb(153, 219, 236);

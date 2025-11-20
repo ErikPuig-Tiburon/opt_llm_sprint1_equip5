@@ -453,3 +453,34 @@ p {
 .row-marketplace .placeholder-ads {
     background-color: white !important;
 }
+
+@media (max-width: 768px) {
+    .document-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .campaign-details {
+        flex-direction: column;
+    }
+    .social-table {
+        display: block;
+        overflow-x: auto;
+    }
+    .idea-boxes {
+        flex-direction: column;
+    }
+    .idea-box-image-geo {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    .benefits {
+        border-left: none;
+        border-top: 1px solid var(--color-separator);
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    .vertical-divider {
+        display: none;
+    }
+}
