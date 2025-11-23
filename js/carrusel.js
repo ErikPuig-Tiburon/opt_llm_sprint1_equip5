@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Dropdown funcional en totes les pàgines (carrusel, contactans, sugerencies)
+    
     if (dropdownBtn && dropdownContent) {
         dropdownBtn.addEventListener('click', function() {
             dropdownContent.classList.toggle('show');
